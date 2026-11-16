@@ -1,4 +1,16 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    
+}
+.clear_button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+.clear_button img {
+	width: 1.5rem;
+	height: 1.5rem;
 }
