@@ -1,6 +1,9 @@
 import Database from 'better-sqlite3';
+import { env } from '$env/dynamic/private';
 
-const db = new Database('local.db');
+const dbPath = env.DATABASE_PATH || './local.db';
+
+const db = new Database(dbPath);
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS contacts (
