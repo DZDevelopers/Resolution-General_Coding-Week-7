@@ -1,7 +1,9 @@
 import Database from 'better-sqlite3';
 import { env } from '$env/dynamic/private';
 
-const dbPath = env.DATABASE_PATH || './local.db';
+const dbPath = env.RAILWAY_VOLUME_MOUNT_PATH
+    ? `${env.RAILWAY_VOLUME_MOUNT_PATH}/local.db`
+    : './local.db';
 
 const db = new Database(dbPath);
 
